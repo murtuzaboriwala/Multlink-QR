@@ -27,9 +27,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 28px 18px;
+  padding: 20px 16px;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 .page {
@@ -39,18 +41,18 @@ body {
 }
 
 .brand {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .logo-wrap {
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   background: white;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -61,37 +63,37 @@ body {
 }
 
 .title {
-  margin: 18px 0 6px;
-  font-size: 20px;
-  letter-spacing: 0.6px;
+  margin: 12px 0 4px;
+  font-size: 18px;
+  letter-spacing: 0.4px;
   font-weight: 700;
 }
 
 .subtitle {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 20px;
   align-items: stretch;
 }
 
 .card {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 18px 20px;
+  gap: 12px;
+  padding: 14px 16px;
   background: var(--card);
   border-radius: var(--card-radius);
   text-decoration: none;
   color: var(--text);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
@@ -100,17 +102,17 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card .fav {
-  width: 50px;
-  height: 50px;
-  flex: 0 0 50px;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -121,8 +123,8 @@ body {
 }
 
 .card .fav svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   color: var(--accent);
 }
 
@@ -133,13 +135,13 @@ body {
 
 .card .meta .label {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .card .meta .sub {
   color: var(--muted);
-  font-size: 13px;
-  margin-top: 6px;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .card .meta .sub a {
@@ -151,25 +153,25 @@ body {
 
 .socials {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .socials a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
   text-decoration: none;
   color: var(--text);
   transition: transform 0.12s ease;
   overflow: visible;
-  padding: 6px;
+  padding: 5px;
 }
 
 .socials a img {
@@ -179,11 +181,65 @@ body {
 }
 
 @media (min-width: 900px) {
+  .logo-wrap {
+    width: 110px;
+    height: 110px;
+  }
+
   .title {
     font-size: 22px;
+    margin: 18px 0 6px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .brand {
+    margin-bottom: 18px;
+  }
+
+  .links {
+    gap: 14px;
+    margin-bottom: 24px;
   }
 
   .card {
-    padding: 20px 26px;
+    padding: 18px 20px;
+    gap: 14px;
+  }
+
+  .card .fav {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    border-radius: 8px;
+  }
+
+  .card .fav svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card .meta .label {
+    font-size: 15px;
+  }
+
+  .card .meta .sub {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .socials {
+    margin-top: 6px;
+    gap: 14px;
+  }
+
+  .socials a {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    padding: 6px;
   }
 }
