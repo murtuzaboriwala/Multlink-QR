@@ -42,11 +42,12 @@ body {
 
 .brand {
   margin-bottom: 16px;
+  margin-top: 8px;
 }
 
 .logo-wrap {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background: white;
   border-radius: 50%;
   display: inline-flex;
@@ -64,8 +65,8 @@ body {
 
 .title {
   margin: 12px 0 4px;
-  font-size: 18px;
-  letter-spacing: 0.4px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
