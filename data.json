@@ -5,57 +5,57 @@
   "cardColor": "#ffffff",
   "textColor": "#0b0b0b",
   "accentColor": "#0b0b0b",
-  "logo": "logo.png",
-  "favIcon": "",
+  "logo": "logos/logo.png",
+  "favicon": "logos/logo.png",
   "links": [
     {
       "number": "1.",
       "title": "SARKHEJ BRANCH",
       "phone": "9099105697",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=23.0041,72.5104",
-      "icon": ""
+      "url": "https://maps.app.goo.gl/bXUFThWgirvLAbbJ6",
+      "iconName": "map-pin"
     },
     {
       "number": "2.",
       "title": "ODHAV BRANCH",
       "phone": "9737805697",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=23.0470,72.5977",
-      "icon": ""
+      "url": "https://maps.app.goo.gl/ynFJHU2rLRvzQvd38",
+      "iconName": "map-pin"
     },
     {
       "number": "3.",
       "title": "ASLALI BRANCH",
       "phone": "7046205697",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=23.0148,72.5719",
-      "icon": ""
+      "url": "https://maps.app.goo.gl/PwNiefqYBNaacWmj9",
+      "iconName": "map-pin"
     },
     {
       "number": "4.",
       "title": "NAROL BRANCH",
       "phone": "9714605697",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=23.0773,72.6038",
-      "icon": ""
+      "url": "https://maps.app.goo.gl/ecrHnQrjgX5ijSZU7",
+      "iconName": "map-pin"
     },
     {
       "number": "5.",
       "title": "MADHUPURA (BARDOLPURA)",
       "phone": "9978005697",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=23.0172,72.6246",
-      "icon": ""
+      "url": "https://maps.app.goo.gl/NWPbQh9B2h7UZ3fh8",
+      "iconName": "map-pin"
     },
     {
       "number": "6.",
       "title": "DAHOD HEADOFFICE",
       "phone": "8141111004",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=22.8320,74.2519",
-      "icon": ""
+      "url": "https://www.google.com/maps/place/22%C2%B049'52.7%22N+74%C2%B016'09.6%22E/@22.831291,74.26932,997m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d22.831291!4d74.26932?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
+      "iconName": "building"
     }
   ],
   "socials": [
     {
       "platform": "Instagram",
       "url": "https://instagram.com/yourprofile",
-      "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+      "icon": "social-logos/instagram-icon.png"
     }
   ]
 }

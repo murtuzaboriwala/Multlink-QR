@@ -1,205 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Locations</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Locations</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+    <link rel="manifest" href="favicons/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="brand">
+        <div class="logo-wrap" id="logoWrap">
+          <img id="logo" class="logo" alt="logo" src="" />
+        </div>
+        <h1 id="title" class="title">Company Name</h1>
+        <p id="subtitle" class="subtitle">Tap a button to reach the location</p>
+      </header>
 
-  <style>
-  :root{
-    --bg: #ffd100;
-    --card: #ffffff;
-    --text: #111;
-    --muted: rgba(0,0,0,0.6);
-    --accent: #222;
-    --card-radius: 10px;
-    --max-width: 720px;
-    --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%;margin:0}
-  body{
-    font-family:var(--font-family);
-    background:var(--bg);
-    color:var(--text);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:28px 18px;
-  }
-  .page{width:100%; max-width:var(--max-width); text-align:center}
-  .brand{margin-bottom:18px}
-  .logo-wrap{
-    width:110px;height:110px;background:rgba(255,255,255,0.9);
-    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
-    box-shadow:0 6px 18px rgba(0,0,0,0.12);overflow:hidden;
-  }
-  .logo{max-width:86%; max-height:86%; display:block}
-  .title{margin:18px 0 6px;font-size:20px;letter-spacing:0.6px;font-weight:700}
-  .subtitle{margin:0 0 18px;color:var(--muted);font-size:13px;font-weight:600}
-  .links{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;align-items:stretch}
-  .card{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--card);
-    border-radius:var(--card-radius);text-decoration:none;color:var(--text);
-    box-shadow:0 6px 12px rgba(0,0,0,0.08);transition:transform .12s ease, box-shadow .12s ease;}
-  .card:active{transform:scale(.996)}
-  .card:hover{box-shadow:0 14px 30px rgba(0,0,0,0.12)}
-  .card .fav{width:36px;height:36px;flex:0 0 36px;display:inline-flex;align-items:center;justify-content:center}
-  .card .fav img{max-width:100%;max-height:100%}
-  .card .meta{flex:1;text-align:left}
-  .card .meta .label{font-weight:700;font-size:15px}
-  .card .meta .sub{color:var(--muted);font-size:13px;margin-top:6px}
-  .card .chev{width:28px;height:28px;flex:0 0 28px;display:inline-flex;align-items:center;justify-content:center;color:var(--accent)}
-  .socials{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:6px}
-  .socials a{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08);text-decoration:none;color:var(--text);transition:transform .12s ease}
-  .socials a img{width:36px;height:36px}
-  @media (min-width:900px){.title{font-size:22px}.card{padding:20px 26px}}
-  </style>
-</head>
-<body>
-  <main class="page">
-    <header class="brand">
-      <div class="logo-wrap" id="logoWrap">
-        <img id="logo" class="logo" alt="logo" src="">
-      </div>
-      <h1 id="title" class="title">Company Name</h1>
-      <p id="subtitle" class="subtitle">Tap a button to reach the location</p>
-    </header>
+      <section id="links" class="links" aria-live="polite">
+        <!-- cards -->
+      </section>
 
-    <section id="links" class="links" aria-live="polite">
-      <!-- cards -->
-    </section>
+      <footer class="socials" id="socials"></footer>
+    </main>
 
-    <footer class="socials" id="socials"></footer>
-  </main>
-
-  <script>
-  (async function(){
-    // Embedded default configuration (used if data.json isn't found).
-    const embedded = {
-      "title":"AHMEDABAD DAHOD TRANSPORT CO.",
-      "subtitle":"TAP ON BUTTON TO REACH THE LOCATION",
-      "bgColor":"#f6c600",
-      "cardColor":"#ffffff",
-      "textColor":"#0b0b0b",
-      "accentColor":"#0b0b0b",
-      "logo":"logo.png",
-      "favIcon":"",
-      "links":[
-        {"number":"1.","title":"SARKHEJ BRANCH","phone":"9099105697","mapUrl":"https://www.google.com/maps/search/?api=1&query=23.0041,72.5104","icon":""},
-        {"number":"2.","title":"ODHAV BRANCH","phone":"9737805697","mapUrl":"https://www.google.com/maps/search/?api=1&query=23.0470,72.5977","icon":""},
-        {"number":"3.","title":"ASLALI BRANCH","phone":"7046205697","mapUrl":"https://www.google.com/maps/search/?api=1&query=23.0148,72.5719","icon":""},
-        {"number":"4.","title":"NAROL BRANCH","phone":"9714605697","mapUrl":"https://www.google.com/maps/search/?api=1&query=23.0773,72.6038","icon":""},
-        {"number":"5.","title":"MADHUPURA (BARDOLPURA)","phone":"9978005697","mapUrl":"https://www.google.com/maps/search/?api=1&query=23.0172,72.6246","icon":""},
-        {"number":"6.","title":"DAHOD HEADOFFICE","phone":"8141111004","mapUrl":"https://www.google.com/maps/search/?api=1&query=22.8320,74.2519","icon":""}
-      ],
-      "socials":[
-        {"platform":"Instagram","url":"https://instagram.com/yourprofile","icon":"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"}
-      ]
-    };
-
-    // Try to fetch data.json in same folder. If unavailable, use embedded config.
-    let cfg = embedded;
-    try{
-      const res = await fetch('data.json', {cache:'no-store'});
-      if(res.ok){
-        const d = await res.json();
-        // shallow merge: provided values override embedded defaults
-        cfg = Object.assign({}, embedded, d);
-      }else{
-        // keep embedded
-      }
-    }catch(e){
-      // use embedded
-    }
-
-    // Apply colors
-    const root = document.documentElement;
-    if(cfg.bgColor) root.style.setProperty('--bg', cfg.bgColor);
-    if(cfg.cardColor) root.style.setProperty('--card', cfg.cardColor);
-    if(cfg.textColor) root.style.setProperty('--text', cfg.textColor);
-    if(cfg.accentColor) root.style.setProperty('--accent', cfg.accentColor);
-
-    // Set texts
-    document.getElementById('title').textContent = cfg.title || '';
-    document.getElementById('subtitle').textContent = cfg.subtitle || '';
-
-    // Logo handling: if logo exists, set src; otherwise hide wrapper
-    const logoImg = document.getElementById('logo');
-    const logoWrap = document.getElementById('logoWrap');
-    if(cfg.logo){
-      logoImg.src = cfg.logo;
-      logoImg.alt = cfg.title || 'logo';
-      // If image fails to load, hide gracefully
-      logoImg.addEventListener('error', ()=>{ logoWrap.style.display='none'; });
-    } else {
-      logoWrap.style.display = 'none';
-    }
-
-    // Render links
-    const linksEl = document.getElementById('links');
-    linksEl.innerHTML = '';
-    const defaultFav = cfg.favIcon || '';
-
-    (cfg.links || []).forEach((item, idx) => {
-      let href = '#';
-      if(item.mapUrl) href = item.mapUrl;
-      else if(item.lat && item.lng) href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.lat + ',' + item.lng)}`;
-      else if(item.phone) href = `tel:${item.phone.replace(/\s+/g,'')}`;
-      else if(item.url) href = item.url;
-
-      const a = document.createElement('a');
-      a.className = 'card';
-      a.href = href;
-      a.target = '_blank';
-      a.rel = 'noopener';
-
-      const fav = document.createElement('div'); fav.className = 'fav';
-      if(item.icon){ const im = document.createElement('img'); im.src = item.icon; im.alt=''; fav.appendChild(im); }
-      else if(defaultFav){ const im = document.createElement('img'); im.src = defaultFav; im.alt=''; fav.appendChild(im); }
-
-      const meta = document.createElement('div'); meta.className = 'meta';
-      const label = document.createElement('div'); label.className='label';
-      const num = item.number || (idx+1) + '.';
-      label.textContent = `${num} ${item.title || item.name || 'Location'}`;
-      const sub = document.createElement('div'); sub.className='sub';
-      if(item.phone) sub.textContent = item.phone;
-      else if(item.address) sub.textContent = item.address;
-      else sub.textContent = item.description || '';
-
-      const chev = document.createElement('div'); chev.className='chev'; chev.innerHTML = '\u203A';
-
-      meta.appendChild(label);
-      if(sub.textContent) meta.appendChild(sub);
-
-      a.appendChild(fav);
-      a.appendChild(meta);
-      a.appendChild(chev);
-
-      linksEl.appendChild(a);
-    });
-
-    // Render socials
-    const socialsEl = document.getElementById('socials');
-    socialsEl.innerHTML = '';
-    (cfg.socials || []).forEach(s => {
-      const a = document.createElement('a');
-      a.href = s.url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      if(s.icon){
-        const im = document.createElement('img');
-        im.src = s.icon;
-        im.alt = s.platform || 'social';
-        a.appendChild(im);
-      } else {
-        a.textContent = s.platform || 'social';
-      }
-      socialsEl.appendChild(a);
-    });
-
-  })();
-  </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
