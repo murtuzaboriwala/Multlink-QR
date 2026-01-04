@@ -30,7 +30,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 20px 16px;
-  min-height: 100vh;
+  min-height: 100vh;  /*e*/
   overflow-y: auto;
 }
 
