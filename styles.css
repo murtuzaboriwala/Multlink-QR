@@ -23,7 +23,7 @@ body {
 body {
   font-family: var(--font-family);
   background: var(--bg);
-  color: var(--text);
+  color: var(--text); /*Color in Site*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
